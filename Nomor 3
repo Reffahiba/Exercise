@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void vPtr(void *pointer, char type){
+	if(type == 'i'){
+		for(int i=0; i < *(int*)pointer; i++){
+			cout<<"ing" <<endl;
+		}
+	}
+	else if(type == 'c'){
+		cout<<"ceng " <<*(char*)pointer <<endl;
+	} 
+}
+
+int main(){
+	int b =  4;
+	void *x = &b;
+	vPtr(x, 'i');
+
+	char c = 'k';
+	void *y = &c;
+	vPtr(y, 'c');
+}
