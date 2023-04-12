@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void baris(float awal, float selisih, float jumlahSuku){
+	float barisAritmatika = 0;
+	for(int i=0; i<jumlahSuku; i++){
+		barisAritmatika = awal + (i*selisih);
+		if (barisAritmatika > 0){
+			cout<<barisAritmatika <<" ";
+		}
+		else{
+			cout<<"Not Found";
+			exit(0);
+		}
+	}
+}
+
+void deret(float awal, float selisih, float jumlahSuku){
+	float deretAritmatika; 
+	deretAritmatika = jumlahSuku/2 * (2*awal + (jumlahSuku-1)*selisih);
+	cout<<deretAritmatika;
+}
+
+int main(){
+	int a,b,c;
+	cin>>a >>b >>c;
+	baris(a, b, c);
+	cout<<endl;
+	deret(a, b, c);
+}
